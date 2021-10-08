@@ -10,9 +10,9 @@ This project was created as teacode recruitment task to do.
 
 **Skills used:**
 
-React (Hooks)
-HTML5
-CSS3
-JS
+-React (Hooks)
+-HTML5
+-CSS3
+-JS
 
 **Link:**
