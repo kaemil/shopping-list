@@ -1,14 +1,14 @@
 import React from 'react';
 
-function ShopListItem(props){
+function ShopListItem({quantity,unit,product,id,handleClick}){
     return (
         <>
             <tr>
                 <td>&#8226;</td>
-                <td>{props.quantity}</td>
-                <td>{props.unit}</td>
-                <td>{props.product}</td>
-                <td><button name='delete' onClick={(e)=>props.handleClick(e,props.id)}>X</button></td>
+                <td>{quantity}</td>
+                <td>{unit}</td>
+                <td>{product}</td>
+                <td><button name='delete' onClick={(e)=> handleClick(e,id)}>X</button></td>
             </tr>
         </>
     );

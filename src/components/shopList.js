@@ -1,15 +1,15 @@
 import React from 'react';
 import ShopListItem from './shopListItem';
 
-function ShopList(props){
-    const products = props.productList.map((product,index)=>{
+function ShopList({productList,productQuantity,unit,handleClick}){
+    const products = productList.map((product,index)=>{
         return <ShopListItem 
-                    quantity={props.productQuantity[index]}
-                    unit={props.unit[index]}
+                    quantity={productQuantity[index]}
+                    unit={unit[index]}
                     key={index}
                     id={index}
                     product={product} 
-                    handleClick={props.handleClick}
+                    handleClick={handleClick}
                 />
     })
     return (

@@ -1,13 +1,17 @@
 import React from 'react';
 
-function ShopPanel(props){
+function ShopPanel({inputFocus,quantity,handleChange,handleClick,product}){
     return (
         <div>
-            <button name='-' onClick={props.handleCounter}>-</button>
-            <span>{props.count}</span>
-            <button name='+' onClick={props.handleCounter}>+</button>
+            <input
+                ref={inputFocus} 
+                type='number' 
+                value={quantity} 
+                name='quantity' 
+                onChange={handleChange}
+            />
             <select
-                onChange={props.handleChange}
+                onChange={handleChange}
                 name='unit'
             >
                 <option value='-'>-</option>
@@ -15,13 +19,12 @@ function ShopPanel(props){
                 <option value='dkg'>dkg</option>
             </select>
             <input 
-                ref={props.inputFocus} 
                 type='text' 
-                value={props.product} 
+                value={product} 
                 name='product' 
-                placeholder='Input product' 
-                onChange={props.handleChange}/>
-            <button name='add' onClick={props.handleClick}>ADD</button>
+                placeholder='Product' 
+                onChange={handleChange}/>
+            <button name='add' onClick={handleClick}>ADD</button>
         </div>
       );
 }
