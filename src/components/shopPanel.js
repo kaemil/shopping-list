@@ -3,12 +3,16 @@ import React from 'react';
 function ShopPanel(props){
     return (
         <div>
-            <button>-</button>
-            <span>0</span>
-            <button>+</button>
-            <select>
-                <option>szt.</option>
-                <option>kg</option>
+            <button name='-' onClick={props.handleCounter}>-</button>
+            <span>{props.count}</span>
+            <button name='+' onClick={props.handleCounter}>+</button>
+            <select
+                onChange={props.handleChange}
+                name='unit'
+            >
+                <option value='-'>-</option>
+                <option value='kg'>kg</option>
+                <option value='dkg'>dkg</option>
             </select>
             <input 
                 ref={props.inputFocus} 

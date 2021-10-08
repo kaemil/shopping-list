@@ -4,6 +4,8 @@ import ShopListItem from './shopListItem';
 function ShopList(props){
     const products = props.productList.map((product,index)=>{
         return <ShopListItem 
+                    quantity={props.productQuantity[index]}
+                    unit={props.unit[index]}
                     key={index}
                     id={index}
                     product={product} 
