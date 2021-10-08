@@ -2,11 +2,11 @@
 
 **Description:** 
 
-Interactive page with list of contacts. User can filtr contacts by name or surname and select contacts which IDs will be displayed in console.log.
+Simple interactive shopping list app where user can insert and delete products to but.
 
 **Why:** 
 
-This project was created as teacode recruitment task to do.
+This project was created to practice React, java script functions, CSS formatting and HTML tags.
 
 **Skills used:**
 - React (Hooks)
