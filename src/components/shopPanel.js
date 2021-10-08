@@ -1,8 +1,11 @@
 import React from 'react';
 
 function ShopPanel({inputFocus,quantity,handleChange,handleClick,product}){
+    
+    // Rozbić na componenty
     return (
         <div>
+
             <input
                 ref={inputFocus} 
                 type='number' 

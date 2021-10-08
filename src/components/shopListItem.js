@@ -1,6 +1,7 @@
 import React from 'react';
 
 function ShopListItem({quantity,unit,product,id,handleClick}){
+        // Rozbić na componenty
     return (
         <>
             <tr>

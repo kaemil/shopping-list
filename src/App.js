@@ -5,10 +5,12 @@ import './style/style.css'
 
 function App() {
     const [quantity,setQuantity] = useState(1)
-    const [product,setProduct] = useState('')
-    const [choosenUnit,setChoosenUnit] = useState('-')
-    const [productList,setProductList] = useState([])
     const [productQuantity,setProductQuantity] = useState([])
+
+    const [product,setProduct] = useState('')
+    const [productList,setProductList] = useState([])
+
+    const [choosenUnit,setChoosenUnit] = useState('-')
     const [unit,setUnit] = useState([])
     const inputFocus = useRef()
 
