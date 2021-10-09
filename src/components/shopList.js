@@ -2,8 +2,7 @@ import React from 'react';
 import ShopListItem from './shopListItem';
 
 function ShopList({ productList, productQuantity, unit, handleClick }) {
-	// Rozbić na componenty
-	const products = productList.map((product, index) => {
+	const getProducts = productList.map((product, index) => {
 		return (
 			<ShopListItem
 				quantity={productQuantity[index]}
@@ -18,7 +17,7 @@ function ShopList({ productList, productQuantity, unit, handleClick }) {
 	return (
 		<div>
 			<table>
-				<tbody>{products}</tbody>
+				<tbody>{getProducts}</tbody>
 			</table>
 		</div>
 	);

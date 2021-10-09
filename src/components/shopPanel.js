@@ -1,32 +1,25 @@
 import React from 'react';
+import QuantityInputPanel from './shopPanelQuantityInput'
+import UnitSelectPanel from './shopPanelUnitSelect'
+import ProductInput from './shopPanelProductInput'
 
-function ShopPanel({inputFocus,quantity,handleChange,handleClick,product}){
+function ShopPanel({inputFocus,handleChange,product,handleClick,quantity}){
     
     // Rozbić na componenty
     return (
         <div>
-
-            <input
-                ref={inputFocus} 
-                type='number' 
-                value={quantity} 
-                name='quantity' 
-                onChange={handleChange}
+            <QuantityInputPanel 
+                inputFocus={inputFocus} 
+                quantity={quantity}
+                handleChange={handleChange}
             />
-            <select
-                onChange={handleChange}
-                name='unit'
-            >
-                <option value='-'>-</option>
-                <option value='kg'>kg</option>
-                <option value='dkg'>dkg</option>
-            </select>
-            <input 
-                type='text' 
-                value={product} 
-                name='product' 
-                placeholder='Product' 
-                onChange={handleChange}/>
+            <UnitSelectPanel 
+                handleChange={handleChange}
+            />
+            <ProductInput 
+                handleChange={handleChange}
+                product={product}
+            />
             <button name='add' onClick={handleClick}>ADD</button>
         </div>
       );

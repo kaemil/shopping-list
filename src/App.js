@@ -7,14 +7,28 @@ function App() {
 	const [quantity, setQuantity] = useState(1);
 	const [productQuantity, setProductQuantity] = useState([]);
 
+	const [choosenUnit, setChoosenUnit] = useState('szt');
+	const [unit, setUnit] = useState([]);
+    
 	const [product, setProduct] = useState('');
 	const [productList, setProductList] = useState([]);
 
-	const [choosenUnit, setChoosenUnit] = useState('-');
-	const [unit, setUnit] = useState([]);
 	const inputFocus = useRef();
 
 	useEffect(() => inputFocus.current.focus(), []);
+
+    useEffect(()=>{
+        const stored = JSON.parse(localStorage.getItem('shoppinglist'))
+        if(stored){
+            const {quantity,unit,list} = stored
+            setProductQuantity(quantity)
+            setUnit(unit)
+            setProductList(list)
+        }
+    },[])
+
+    useEffect(()=>{localStorage.setItem('shoppinglist',JSON.stringify({quantity:[...productQuantity], unit:[...unit], list:[...productList]}))
+    },[productList,unit,productQuantity])
 
 	const handleChange = (e) => {
 		if (e.target.name === 'product') {
@@ -28,12 +42,12 @@ function App() {
 		if (e.target.name === 'add') {
 			setUnit([...unit, choosenUnit]);
 			setProductList([...productList, product]);
+            setProductQuantity([...productQuantity, quantity]);
 			setProduct('');
 			setQuantity(1);
-			setProductQuantity([...productQuantity, quantity]);
 			inputFocus.current.focus();
 		} else {
-			productList.splice(id, 1);
+            [productQuantity,unit,productList].map(element => element.splice(id,1))
 			setProductList([...productList]);
 		}
 	};
