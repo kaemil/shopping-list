@@ -7,7 +7,7 @@ function UnitSelectPanel({handleChange}){
                 onChange={handleChange}
                 name='unit'
             >
-                <option value='szt'>szt</option>
+                <option value=''></option>
                 <option value='kg'>kg</option>
                 <option value='dkg'>dkg</option>
             </select>

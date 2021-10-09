@@ -7,7 +7,7 @@ function App() {
 	const [quantity, setQuantity] = useState(1);
 	const [productQuantity, setProductQuantity] = useState([]);
 
-	const [choosenUnit, setChoosenUnit] = useState('szt');
+	const [choosenUnit, setChoosenUnit] = useState('');
 	const [unit, setUnit] = useState([]);
     
 	const [product, setProduct] = useState('');
