@@ -116,6 +116,9 @@ body {
     border-top: 2px solid $borderColor;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 table {
