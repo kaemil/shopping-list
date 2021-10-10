@@ -3,20 +3,21 @@ $backgroundColor: #edf375;
 $backgroundColorHover: #9ca73a;
 $borderColor: #9ca73a;
 
-* {
-    font-family: 'Patrick Hand', cursive;
+body {
+    margin: 0;
+    background-color: $backgroundColor;
+    font-family: 'Itim', cursive;
 }
 
 .container {
     width: 100%;
     margin: 0;
-    border-radius: 25px;
     background-color: $backgroundColor;
 }
 
 .shopHeader {
+    margin-top: 0;
     padding-top: 20px;
-    margin: 20px 10px 20px 10px;
     text-align: center;
 }
 
@@ -109,7 +110,7 @@ $borderColor: #9ca73a;
 
 .shopFooter {
     height: 40px;
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     background-color: $backgroundColor;
     border-top: 2px solid $borderColor;
@@ -177,9 +178,14 @@ input:-webkit-autofill:active {
 }
 
 @media (min-width: 768px) {
+    body {
+        background-color: #ffffff;
+    }
+
     .container {
         margin: 50px auto 0 auto;
         max-width: 500px;
+        border-radius: 25px;
 
         .shopPanel {
             &__quantity {

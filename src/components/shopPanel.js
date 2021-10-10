@@ -21,8 +21,8 @@ function ShopPanel({handlePress,inputFocus,handleChange,product,handleClick,quan
                 handleChange={handleChange}
                 product={product}
             />
-            <button className="shopPanel__button--add" name='add' onClick={handleClick}>ADD</button>
             <button className="shopPanel__button--clear" name='clear' onClick={handleClick}>CLEAR</button>
+            <button className="shopPanel__button--add" name='add' onClick={handleClick}>ADD</button>
         </div>
       );
 }
