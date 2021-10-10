@@ -17,6 +17,7 @@ function ShopList({ productList, productQuantity, unit, handleClick }) {
 	return (
 		<div className="shopList">
 			<table>
+                <thead><tr><td colSpan="5">Shopping List</td></tr></thead>
 				<tbody>{getProducts}</tbody>
 			</table>
 		</div>

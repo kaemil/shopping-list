@@ -82,6 +82,7 @@ function App() {
 				handleClick={handleClick}
 				productList={productList}
 			/>
+            <div className="shopFooter">&#128722;</div>
 		</div>
 	);
 }

@@ -2,14 +2,16 @@
     font-family: 'Patrick Hand', cursive;
 }
 
-body {}
-
 .container {
     width: 100%;
     margin: 0;
+    border-radius:25px;
+    background-color: #edf375;
 }
 
 .shopHeader {
+
+    padding-top: 20px;
     margin: 20px 10px 20px 10px;
     text-align: center;
 }
@@ -27,9 +29,9 @@ body {}
         padding: 0;
         outline: none;
         border: none;
-        border-top: 2px solid #4b4b4b;
-        background-color: #bebebe;
-        color: #4b4b4b;
+        border-top: 2px solid #9ca73a;
+        background-color: #edf375;
+        color: #000000;
     }
 
     &__quantity {
@@ -38,7 +40,7 @@ body {}
         height: 40px;
         box-sizing: border-box;
     }
-    
+
 
     &__unit {
         text-align: center;
@@ -58,6 +60,16 @@ body {}
 
     &__button--add {
         order: 5;
+        border-top: 2px solid #50c550;
+        background-color: #b2ffa3;
+        color: #50c550;
+    }
+
+    &__button--clear {
+        order: 4;
+        border-top: 2px solid #a73e3e;
+        background-color: #ffa3a3;
+        color: #a73e3e;
     }
 
     &__button--add,
@@ -66,29 +78,37 @@ body {}
         height: 40px;
         text-align: center;
     }
-    &__quantity:hover, &__unit:hover,&__product:hover {
+
+    &__quantity:hover,
+    &__unit:hover,
+    &__product:hover {
         border-top: 2px solid #9ca73a;
-        background-color: #edf375;
+        background-color: #c0cc53;
         color: #000000;
     }
 
-    &__quantity:focus, &__unit:focus, &__product:focus {
+    &__quantity:focus,
+    &__unit:focus,
+    &__product:focus {
         border-top: 2px solid #9ca73a;
-        background-color: #edf375;
+        background-color: #c0cc53;
         color: #000000;
     }
 
-    &__button--clear:hover {
-        border-top: 2px solid #a73e3e;
-        background-color: #ffa3a3;
-        color: #a73e3e;
+    &__button--add:hover,
+    &__button--add:focus {
+        border-top: 2px solid #50c550;
+        background-color: #79e779;
+        color: #000000;
     }
 
-    &__button--add:hover {
-        border-top: 2px solid #3ea73e;
-        background-color: #b2ffa3;
-        color: #3ea73e;
+    &__button--clear:hover,
+    &__button--clear:focus {
+        border-top: 2px solid #ca4e4e;
+        background-color: #d87777;
+        color: #000000;
     }
+
 
 
 
@@ -97,10 +117,8 @@ body {}
     &__unit:hover {
         cursor: pointer;
     }
-
-
-
 }
+
 
 .shopList {
     width: 100%;
@@ -121,12 +139,27 @@ body {}
     }
 }
 
+.shopFooter{
+    height: 40px;
+    font-size: 26px;
+    text-align: center;
+    background-color: #9ca73a;
+    border-top:2px solid #9ca73a;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
-
+thead > tr{
+    background-color: #9ca73a;
+}
 tr {
+    height: 40px;
     background-color: #edf375;
     border-top: 2px solid #9ca73a;
 
@@ -143,7 +176,7 @@ td:last-child {
 
 td:nth-child(4) {
     word-break: break-all;
-    word-wrap: break-word;  
+    word-wrap: break-word;
     padding-left: 10px;
     border-right: 1px dashed #c0cc53;
 }
@@ -168,8 +201,40 @@ input[type=number] {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #edf375 inset !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+    box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        margin: 50px auto 0 auto;
+        max-width: 500px;
+
+        .shopPanel {
+            &__quantity {
+                width: 10%;
+            }
+
+            &__unit {
+                width: 15%;
+            }
+
+            &__product {
+                width: 55%;
+            }
+
+            &__button--add {
+                width: 10%;
+            }
+
+            &__button--clear {
+                width: 10%;
+            }
+
+        }
+    }
 }
