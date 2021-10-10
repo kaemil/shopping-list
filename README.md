@@ -15,4 +15,5 @@ This project was created to practice React, java script functions, CSS formattin
 - JS
 
 **Link:**
+
 https://kaemil.github.io/shopping-list/
