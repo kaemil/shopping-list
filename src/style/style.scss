@@ -1,11 +1,175 @@
+* {
+    font-family: 'Patrick Hand', cursive;
+}
+
+body {}
+
+.container {
+    width: 100%;
+    margin: 0;
+}
+
+.shopHeader {
+    margin: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+.shopPanel {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &__quantity,
+    &__unit,
+    &__product,
+    &__button--add,
+    &__button--clear {
+        padding: 0;
+        outline: none;
+        border: none;
+        border-top: 2px solid #4b4b4b;
+        background-color: #bebebe;
+        color: #4b4b4b;
+    }
+
+    &__quantity {
+        text-align: center;
+        width: 10%;
+        height: 40px;
+        box-sizing: border-box;
+    }
+    
+
+    &__unit {
+        text-align: center;
+        width: 15%;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    &__product {
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 75%;
+        text-align: center;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    &__button--add {
+        order: 5;
+    }
+
+    &__button--add,
+    &__button--clear {
+        width: 50%;
+        height: 40px;
+        text-align: center;
+    }
+    &__quantity:hover, &__unit:hover,&__product:hover {
+        border-top: 2px solid #9ca73a;
+        background-color: #edf375;
+        color: #000000;
+    }
+
+    &__quantity:focus, &__unit:focus, &__product:focus {
+        border-top: 2px solid #9ca73a;
+        background-color: #edf375;
+        color: #000000;
+    }
+
+    &__button--clear:hover {
+        border-top: 2px solid #a73e3e;
+        background-color: #ffa3a3;
+        color: #a73e3e;
+    }
+
+    &__button--add:hover {
+        border-top: 2px solid #3ea73e;
+        background-color: #b2ffa3;
+        color: #3ea73e;
+    }
+
+
+
+    &__button--add:hover,
+    &__button--clear:hover,
+    &__unit:hover {
+        cursor: pointer;
+    }
+
+
+
+}
+
+.shopList {
+    width: 100%;
+
+    &__button--delete {
+        text-align: center;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        outline: none;
+        border: none;
+        background-color: #edf375;
+    }
+
+    &__button--delete:hover {
+        background-color: #9ca73a;
+        cursor: pointer;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: #edf375;
+    border-top: 2px solid #9ca73a;
+
+}
+
+td:first-child,
+td:nth-child(2),
+td:nth-child(3),
+td:last-child {
+    border-right: 1px dashed #c0cc53;
+    width: 10%;
+    text-align: center;
+}
+
+td:nth-child(4) {
+    word-break: break-all;
+    word-wrap: break-word;  
+    padding-left: 10px;
+    border-right: 1px dashed #c0cc53;
+}
+
+td:last-child {
+    border: none;
+}
+
+
+
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #edf375 inset !important;
 }

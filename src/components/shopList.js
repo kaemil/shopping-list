@@ -15,7 +15,7 @@ function ShopList({ productList, productQuantity, unit, handleClick }) {
 		);
 	});
 	return (
-		<div>
+		<div className="shopList">
 			<table>
 				<tbody>{getProducts}</tbody>
 			</table>

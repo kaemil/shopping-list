@@ -46,15 +46,30 @@ function App() {
 			setProduct('');
 			setQuantity(1);
 			inputFocus.current.focus();
-		} else {
+		} else if(e.target.name === 'clear'){
+            setUnit([]);
+			setProductList([]);
+            setProductQuantity([]);
+        } else{
             [productQuantity,unit,productList].map(element => element.splice(id,1))
 			setProductList([...productList]);
 		}
 	};
-
+    const handlePress = (e) =>{
+        if(e.key === 'Enter') {
+			setUnit([...unit, choosenUnit]);
+			setProductList([...productList, product]);
+            setProductQuantity([...productQuantity, quantity]);
+			setProduct('');
+			setQuantity(1);
+			inputFocus.current.focus();
+        }
+    }
 	return (
-		<div>
+		<div className="container">
+            <h1 className="shopHeader">Create your own shopping list!</h1>
 			<ShopPanel
+                handlePress={handlePress}
 				inputFocus={inputFocus}
 				handleChange={handleChange}
 				product={product}
