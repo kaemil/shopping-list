@@ -4,12 +4,12 @@ function QuantityInputPanel({handlePress,product,handleChange}){
     return(
         <>
             <input 
-                onKeyPress={handlePress}
                 className="shopPanel__product"
                 type='text' 
-                value={product} 
                 name='product' 
-                placeholder='Product' 
+                placeholder='Insert product'
+                onKeyPress={handlePress}
+                value={product} 
                 onChange={handleChange}
             />
         </>

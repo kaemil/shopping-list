@@ -5,8 +5,8 @@ function UnitSelectPanel({handleChange}){
         <>
             <select
                 className="shopPanel__unit"
-                onChange={handleChange}
                 name='unit'
+                onChange={handleChange}
             >
                 <option value='pcs'>pcs</option>
                 <option value='kg'>kg</option>

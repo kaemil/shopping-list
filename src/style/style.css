@@ -31,79 +31,39 @@
   border-top: 2px solid #9ca73a;
   background-color: #edf375;
   color: #000000;
+  text-align: center;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .shopPanel__quantity {
-  text-align: center;
   width: 10%;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .shopPanel__unit {
-  text-align: center;
   width: 15%;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .shopPanel__product {
   padding-right: 10px;
   padding-left: 10px;
   width: 75%;
-  text-align: center;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.shopPanel__button--add {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-  border-top: 2px solid #50c550;
-  background-color: #b2ffa3;
-  color: #50c550;
-}
-
-.shopPanel__button--clear {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-  border-top: 2px solid #a73e3e;
-  background-color: #ffa3a3;
-  color: #a73e3e;
 }
 
 .shopPanel__button--add, .shopPanel__button--clear {
   width: 50%;
-  height: 40px;
-  text-align: center;
 }
 
-.shopPanel__quantity:hover, .shopPanel__unit:hover, .shopPanel__product:hover {
+.shopPanel__quantity:hover, .shopPanel__unit:hover, .shopPanel__product:hover, .shopPanel__button--add:hover, .shopPanel__button--clear:hover {
   border-top: 2px solid #9ca73a;
-  background-color: #c0cc53;
+  background-color: #9ca73a;
   color: #000000;
 }
 
-.shopPanel__quantity:focus, .shopPanel__unit:focus, .shopPanel__product:focus {
+.shopPanel__quantity:focus, .shopPanel__unit:focus, .shopPanel__product:focus, .shopPanel__button--add:focus, .shopPanel__button--clear:focus {
   border-top: 2px solid #9ca73a;
-  background-color: #c0cc53;
-  color: #000000;
-}
-
-.shopPanel__button--add:hover, .shopPanel__button--add:focus {
-  border-top: 2px solid #50c550;
-  background-color: #79e779;
-  color: #000000;
-}
-
-.shopPanel__button--clear:hover, .shopPanel__button--clear:focus {
-  border-top: 2px solid #ca4e4e;
-  background-color: #d87777;
+  background-color: #9ca73a;
   color: #000000;
 }
 
@@ -117,8 +77,10 @@
 
 .shopList__button--delete {
   text-align: center;
+  -webkit-box-sizing: b;
+          box-sizing: b;
   padding: 0;
-  width: 40px;
+  width: 100%;
   height: 40px;
   outline: none;
   border: none;
@@ -134,7 +96,7 @@
   height: 40px;
   font-size: 26px;
   text-align: center;
-  background-color: #9ca73a;
+  background-color: #edf375;
   border-top: 2px solid #9ca73a;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -146,7 +108,7 @@ table {
 }
 
 thead > tr {
-  background-color: #9ca73a;
+  background-color: #edf375;
 }
 
 tr {
@@ -155,11 +117,14 @@ tr {
   border-top: 2px solid #9ca73a;
 }
 
+td {
+  padding: 0;
+}
+
 td:first-child,
 td:nth-child(2),
 td:nth-child(3),
 td:last-child {
-  border-right: 1px dashed #c0cc53;
   width: 10%;
   text-align: center;
 }
@@ -168,7 +133,6 @@ td:nth-child(4) {
   word-break: break-all;
   word-wrap: break-word;
   padding-left: 10px;
-  border-right: 1px dashed #c0cc53;
 }
 
 td:last-child {
@@ -191,8 +155,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
-  box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+  -webkit-box-shadow: 0 0 0 30px #edf375 inset !important;
+  box-shadow: 0 0 0 30px #edf375 inset !important;
 }
 
 @media (min-width: 768px) {

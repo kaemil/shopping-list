@@ -5,11 +5,11 @@ function QuantityInputPanel({inputFocus,quantity,handleChange}){
         <>
             <input
                 className="shopPanel__quantity"
-                ref={inputFocus} 
                 type='number' 
-                value={quantity} 
                 name='quantity' 
                 onChange={handleChange}
+                ref={inputFocus} 
+                value={quantity} 
             />
         </>
     )

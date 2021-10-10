@@ -4,19 +4,22 @@ import ShopPanel from './components/shopPanel';
 import './style/style.css';
 
 function App() {
+    // Quantity state
 	const [quantity, setQuantity] = useState(1);
 	const [productQuantity, setProductQuantity] = useState([]);
-
-	const [choosenUnit, setChoosenUnit] = useState('');
+    // Unit state
+	const [choosenUnit, setChoosenUnit] = useState('psc');
 	const [unit, setUnit] = useState([]);
-    
+    // Product state
 	const [product, setProduct] = useState('');
 	const [productList, setProductList] = useState([]);
 
 	const inputFocus = useRef();
 
+    // Focusing first input at page load
 	useEffect(() => inputFocus.current.focus(), []);
 
+    // Local Storage for setting and getting data.
     useEffect(()=>{
         const stored = JSON.parse(localStorage.getItem('shoppinglist'))
         if(stored){
@@ -30,6 +33,7 @@ function App() {
     useEffect(()=>{localStorage.setItem('shoppinglist',JSON.stringify({quantity:[...productQuantity], unit:[...unit], list:[...productList]}))
     },[productList,unit,productQuantity])
 
+    // Setting quantitiy, unit and product handle
 	const handleChange = (e) => {
 		if (e.target.name === 'product') {
 			setProduct(e.target.value);
@@ -38,6 +42,7 @@ function App() {
 		} else setChoosenUnit(e.target.value);
 	};
 
+    // Adding and clearing all products handle and single deleting
 	const handleClick = (e, id) => {
 		if (e.target.name === 'add') {
 			setUnit([...unit, choosenUnit]);
@@ -55,6 +60,8 @@ function App() {
 			setProductList([...productList]);
 		}
 	};
+
+    // Sending data from input using Enter key
     const handlePress = (e) =>{
         if(e.key === 'Enter') {
 			setUnit([...unit, choosenUnit]);
