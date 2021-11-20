@@ -84,8 +84,8 @@ function App() {
 				quantity={quantity}
 			/>
 			<ShopList
-				unit={unit}
 				productQuantity={productQuantity}
+				unit={unit}
 				handleClick={handleClick}
 				productList={productList}
 			/>
